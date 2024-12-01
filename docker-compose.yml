@@ -1,0 +1,29 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pdf_chat_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - ENV_FILE=.env
+    depends_on:
+      - db
+
+  db:
+    image: postgres:14
+    container_name: pdf_chat_db
+    environment:
+      POSTGRES_USER: your POSTGRES_USER
+      POSTGRES_PASSWORD: your POSTGRES_PASSWORD
+      POSTGRES_DB: pdf_chat
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
