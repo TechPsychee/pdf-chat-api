@@ -1,6 +1,6 @@
 # PDF Chat API
 
-A sophisticated FastAPI application that enables users to chat with PDF documents using Google's Gemini API. Built with FastAPI for the backend and Streamlit for the frontend.
+A FastAPI application that enables users to chat with PDF documents using Google's Gemini API. Built with FastAPI for the backend and Streamlit for the frontend.
 
 ## Features
 
